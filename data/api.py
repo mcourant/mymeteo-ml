@@ -14,4 +14,17 @@ def getAllData():
 
       allTemp = rec_2019 + rec_2018 + rec_2017 + rec_2016
 
-      return allTemp
+      return processJson(allTemp)
+
+def processJson(json):
+      processedJson = []
+      for data in json:
+            tmpJson = {}
+            tmpJson["date"] = data["fields"]["date"]
+            tmpJson["tmin"] = data["fields"]["tmin"]
+            tmpJson["tmoy"] = data["fields"]["tmoy"]
+            tmpJson["tmax"] = data["fields"]["tmax"]
+            processedJson.append(tmpJson)
+      return processedJson
+
+print(getAllData())
