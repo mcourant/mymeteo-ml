@@ -12,7 +12,7 @@ def getAllData():
       rec_2017 = json.loads(req_2017.content)["records"]
       rec_2016 = json.loads(req_2016.content)["records"]
 
-      allTemp = rec_2019 + rec_2018 + rec_2017 + rec_2016
+      allTemp = rec_2016 + rec_2017 + rec_2018 + rec_2019
 
       return processJson(allTemp)
 
@@ -26,5 +26,3 @@ def processJson(json):
             tmpJson["tmax"] = data["fields"]["tmax"]
             processedJson.append(tmpJson)
       return processedJson
-
-print(getAllData())
