@@ -38,3 +38,4 @@ def handleData(data):
       print("Predict day 166 = ", predict[0])
       print("                   TEMPMAX     / TEMPMIN  / TEMPMOY")
       print("Predict day 270 = ", predict[1])
+      

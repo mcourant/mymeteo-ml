@@ -11,7 +11,3 @@ import ml
 data = api.getAllData()
 
 ml.handleData(data)
-
-
-# df = pd.read_csv("datasource.csv")
-# print(type(df))
